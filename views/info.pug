@@ -1,0 +1,34 @@
+extends ui_layout
+
+block content
+  .ui.text.container(style="margin-top: 2em; margin-bottom: 2em;")
+    h1(style="text-align: center;") Welcome to Yappin’ Beta v0.9!
+    p Welcome to yappin’ – a place where people share thoughts, opinions, and photos from everyday life. See what others are yapping about right now – browse posts, react, and join the conversation. 
+
+    h3 Guided Exploration Instructions
+    p You will be given 15 minutes to explore Yappin’. Once you begin the study, you will create a login and a user profile. After creating your account, please follow these steps:
+    ul
+        li Click on the first user profile you see and explore their posts. Interact with posts by liking them, commenting, or flagging them.
+        li When you are finished, return to the home page.
+        li Like others' posts to show you love their snaps!
+        li If there is a new post at the top of the feed, click on that user and explore their profile.
+        li If the feed has not updated, scroll down until you see a new user profile and explore that profile instead
+    img.ui.centered.image(src='/public/Logo.png')
+    p After you have explored three profiles, you are free to continue browsing the site however you would like for the remainder of the study. You can continue interacting with posts and exploring profiles, or you can customize your own profile and create your own posts if you choose.
+
+    p After your time is up, you will be directed back to the Qualtrics survey to complete a “user experiences survey.” You will rate the site on its usability, aesthetics, and content. We’re interested in your experience using the site and any feedback you have about it!
+    .ui.big.green.labeled.icon.button.interest
+        i.rocket.icon
+        |   Continue
+
+    script.
+        $('.ui.big.green.labeled.icon.button.interest').on('click', function() {
+            $(this).addClass('loading disabled');
+            $.post("/account/consent", {
+                    _csrf: $('meta[name="csrf-token"]').attr('content')
+                }).done(function(json) {
+                    if (json["result"] === "success") {
+                        window.location.href = '/'
+                    }
+                });
+        });

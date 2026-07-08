@@ -1,0 +1,33 @@
+extends ui_layout
+
+block content
+  .ui.text.container(style="margin-top: 2em; margin-bottom: 2em")
+    h2(style="text-align: center;") Community Rules for Yappin’ Beta v0.9
+    p We are so glad you are here to yap with us! Before you get started, please review our community rules. Please note that this is not a comprehensive list. Our moderators reserve the right to remove any content deemed inappropriate.
+
+    p Remember: If you encounter any content that appears to violate our community rules, be sure to <b>Flag It 🚩</b> so our moderator team can investigate and help out.
+
+    h3 Respectful Communication
+    p Maintain courteous, respectful communication. Personal attacks, harassment, and bullying are strictly prohibited.
+
+    h3 No Hate Speech or Discrimination
+    p Content promoting hate or discrimination based on race, ethnicity, gender, sexual orientation, religion, or disability is strictly prohibited.  
+
+    h3 No Spam
+    p Excessive posting of self-promotional material, spam, or irrelevant content is prohibited.
+
+    h3 Privacy
+    p Respect the privacy of others and do not share personal information without consent.
+
+    h3 No Illegal Content
+    p Content promoting illegal activity or goods will be removed.
+
+    if user && !user.consent
+      .ui.big.green.labeled.icon.button.info
+          i.rocket.icon
+          |   Got it!
+  
+  script.
+    $('.ui.big.green.labeled.icon.button.info').on('click', function() {
+        window.location.href = '/info';
+      });
