@@ -1,0 +1,18 @@
+MONGODB_URI=mongodb+srv://connectlabksu:bluemonthall444@cluster0.plmdvci.mongodb.net/?appName=Cluster0
+SESSION_SECRET=YourSessionSecretgoeshere
+
+POST_SURVEY=
+POST_SURVEY_WITH_QUALTRICS=FALSE
+RESEARCHER_EMAIL=npcopenhaver@ksu.edu
+IDENTIFIER="Access Code"
+NUM_DAYS=1
+SITE_NAME=yappin'
+SITE_LOGO=\public\Logo.png
+SITE_FAVICON=\public\Favicon.png
+SITE_PICTURE=\public\signin.jpg
+NUM_EXP_CONDITIONS=3
+EXP_CONDITIONS_NAMES=joy,doom,sike
+FEED_ORDER=CHRONOLOGICAL
+CDN=
+
+REMOVE_FLAGGED_CONTENT=FALSE
