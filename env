@@ -1,4 +1,4 @@
-MONGODB_URI=mongodb+srv://npcopenhaver:jW6uP7q0wrUHoJwe@yappin.6qsgrkp.mongodb.net/?appName=yappin
+MONGODB_URI=mongodb+srv://npcopenhaver:backtothedrawingboard1@yappin.6qsgrkp.mongodb.net/?appName=yappin
 SESSION_SECRET=YourSessionSecretgoeshere
 
 POST_SURVEY=
